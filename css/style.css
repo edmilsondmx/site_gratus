@@ -878,7 +878,7 @@ section{
 }
 
 /* teste whats */
-.whatsbutton-container {
+/* .whatsbutton-container {
     position: fixed;
     display: block;
     bottom: 25%;
@@ -1000,10 +1000,10 @@ section{
 }
 @keyframes WhatsButtonShow {
     0% {
-        /* margin-right: 100px; */
+        margin-right: 100px;
         opacity: 0;
     }
-}
+} */
 
 @media (max-width:1400px) {
     .products .box-container {
@@ -1138,7 +1138,7 @@ section{
     .header .active .fa-cog {
         display: block;
         position: absolute;
-        font-size: 30rem;
+        font-size: 20rem;
         opacity: .15;
         color: var(--light-color);
         animation: rotate 10s linear infinite;
@@ -1191,8 +1191,9 @@ section{
     }
 
     .home .swiper-slide .row .image{
-        /* display: none; */
-        max-height: 50%;
+        flex: 1 1 3rem;
+        max-height: 70%;
+        max-width: 70%;
     }
 
     .home .swiper-slide .row .content {
@@ -1258,7 +1259,6 @@ section{
 
     .contact{
         margin-top: 70px;
-        padding: 5px!important;
     }
 
     .footer .box-container {
