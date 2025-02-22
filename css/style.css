@@ -1236,7 +1236,7 @@ section{
         background-color: #e9f3fcd3;
     }
 
-    .products .box-container .box:hover .content h3, p{
+    .products .box-container .box:hover .content h3{
         font-size: 4rem !important;
     }
 
