@@ -1258,6 +1258,7 @@ section{
 
     .contact{
         margin-top: 70px;
+        padding: 5px!important;
     }
 
     .footer .box-container {
