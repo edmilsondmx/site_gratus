@@ -784,7 +784,7 @@ section{
     text-transform: uppercase;
 }
 
-.footer .box-container .box p{
+.footer .box-container .box .info{
     display: block;
     font-size: 1.5rem;
     padding: 1rem 0;
@@ -816,12 +816,20 @@ section{
     color: var(--light-color);
 }
 
+.footer .box-container .box .info {
+    display: flex;
+    font-size: 1.5rem;
+    padding: 0.6rem 0;
+    color: var(--light-color);
+    align-items: center;
+}
+
 .footer .box-container .box a i{
     padding-right: .5rem;
     color: var(--main-color);
 }
 
-.footer .box-container .box p i {
+.footer .box-container .box .info i {
     padding-right: .5rem;
     color: var(--main-color);
 }
@@ -1224,7 +1232,7 @@ section{
     }
 
     .services .box-container .box img{
-        height: 140px;
+        max-height: 140px;
     }
 
     .products{
@@ -1270,6 +1278,10 @@ section{
 
     .footer .box-container {
         gap: 0rem;
+    }
+
+    .footer .box-container .box .info {
+        gap: 0.5rem;
     }
 
 }
