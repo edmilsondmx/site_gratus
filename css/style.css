@@ -888,6 +888,65 @@ section{
     height: 35px;
 }
 
+.cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--main-color);
+    color: var(--bg);
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cookie-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.cookie-text {
+    max-width: 300px;
+    font-size: 1.2rem;
+}
+
+.cookie-text 
+
+.cookie-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.accept-btn,
+.reject-btn {
+    border: none;
+    cursor: pointer;
+    padding: 8px 15px;
+    font-size: 1.4rem;
+    border-radius: 20px;
+    font-weight: bolder;
+}
+
+.accept-btn {
+    /* background: var(--main-color); */
+    background: var(--bg);
+    color: var(--main-color);
+}
+
+.reject-btn {
+    background: transparent;
+    border: 1px solid var(--bg);
+    color: var(--bg);
+}
+
+/* Ocultar por padrão */
+.cookie-banner.hidden {
+    display: none;
+}
+
 /* teste whats */
 /* .whatsbutton-container {
     position: fixed;
@@ -1288,5 +1347,16 @@ section{
         gap: 0.5rem;
     }
 
+    .cookie-banner{
+        width: 80%;
+        padding: 7px;
+    }
+
+    .accept-btn,
+    .reject-btn {
+        padding: 4px 6px;
+        font-size: 1.2rem;
+        margin: 4px;
+    }
 }
 
