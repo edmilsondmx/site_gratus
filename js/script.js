@@ -57,4 +57,25 @@ var swiper = new Swiper(".products-slider", {
         slidesPerView: 3,
       },
     },
-  });
+});
+  
+function aceitarCookies() {
+  document.cookie = "cookiesAceitos=true; expires=Fri, 31 Dec 2025 23:59:59 GMT; path=/";
+  localStorage.setItem("cookiesAceitos", "true");
+  document.getElementById("cookie-banner").classList.add("hidden");
+}
+
+function rejeitarCookies() {
+  document.cookie = "cookiesAceitos=false; expires=Fri, 31 Dec 2025 23:59:59 GMT; path=/";
+  localStorage.setItem("cookiesAceitos", "false");
+  document.getElementById("cookie-banner").classList.add("hidden");
+}
+
+function verificarConsentimento() {
+  const consentido = localStorage.getItem("cookiesAceitos");
+  if (consentido === "true" || consentido === "false") {
+      document.getElementById("cookie-banner").classList.add("hidden");
+  }
+}
+
+window.onload = verificarConsentimento;
