@@ -28,7 +28,7 @@ var swiper = new Swiper(".image-slider", {
     },
     loop: true,
     autoplay: {
-        delay: 500000,
+        delay: 5000,
         disableOnInteraction: false,
   },
 });
