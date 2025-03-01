@@ -79,3 +79,49 @@ function verificarConsentimento() {
 }
 
 window.onload = verificarConsentimento;
+
+function filterProducts() {
+    const checkbox = document.getElementById("productFilter");
+    const category = checkbox.checked ? "pecas" : "insumos";
+    const boxes = document.querySelectorAll(".box-products");
+
+    boxes.forEach(box => {
+        box.style.display = box.dataset.category === category ? "block" : "none";
+    });
+}
+document.addEventListener("DOMContentLoaded", filterProducts);
+
+
+
+function startCarousel(carouselId) {
+  const carousel = document.getElementById(carouselId);
+  const images = carousel.querySelectorAll('.carousel-image');
+  let currentIndex = 0;
+
+  function changeImage() {
+    images.forEach((img, index) => {
+      img.classList.remove('active');
+      if (index === currentIndex) {
+        img.classList.add('active');
+      }
+    });
+    
+    currentIndex = (currentIndex + 1) % images.length;
+  }
+
+  setInterval(changeImage, 3000); // Troca de imagem a cada 3 segundos
+  changeImage(); // Inicializa a primeira imagem
+}
+
+// Iniciar os carrosséis, um por vez
+startCarousel('carousel1'); // Carrossel 1 começa imediatamente
+setTimeout(() => startCarousel('carousel2'), 500); // Carrossel 2 começa após 500ms
+setTimeout(() => startCarousel('carousel3'), 1000); // Carrossel 3 começa após 1000ms
+
+document.getElementById('moreInfo').addEventListener('click', function() {
+            document.getElementById('banner').style.display = 'block';
+        });
+
+document.getElementById('fecharBtn').addEventListener('click', function() {
+    document.getElementById('banner').style.display = 'none';
+});
