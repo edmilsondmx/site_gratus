@@ -118,10 +118,17 @@ startCarousel('carousel1'); // Carrossel 1 começa imediatamente
 setTimeout(() => startCarousel('carousel2'), 500); // Carrossel 2 começa após 500ms
 setTimeout(() => startCarousel('carousel3'), 1000); // Carrossel 3 começa após 1000ms
 
-document.getElementById('moreInfo').addEventListener('click', function() {
-            document.getElementById('banner').style.display = 'block';
-        });
+document.getElementById('moreInfo').addEventListener('click', function () {
+  document.getElementById('overlay').style.display = 'block';
+  document.getElementById('banner').style.display = 'block';
+});
 
-document.getElementById('fecharBtn').addEventListener('click', function() {
-    document.getElementById('banner').style.display = 'none';
+document.getElementById('fecharBtn').addEventListener('click', function () {
+  document.getElementById('overlay').style.display = 'none';
+  document.getElementById('banner').style.display = 'none';
+});
+
+document.getElementById('overlay').addEventListener('click', function() {
+  document.getElementById('overlay').style.display = 'none';
+  document.getElementById('banner').style.display = 'none';
 });
