@@ -509,6 +509,18 @@ section{
     background-color: white;
 }
 
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.7); */
+    background-color: hsla(188, 68%, 39%, 0.7);
+    z-index: 1000;
+}
+
 .banner {
     display: none;
     position: fixed;
@@ -522,17 +534,59 @@ section{
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    z-index: 4;
+    z-index: 1001;
 }
 
-.banner h3 {
+.banner .content .label {
+    font-size: 2rem;
+    background-color: #2096a8;
+    color: black;
+    font-weight: bold;
+    padding: 5px 10px;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    left: 18px;
+}
+
+.banner .content .line {
+    width: 90%;
+    height: 3px;
+    background-color: #555;
+    position: relative;
+    z-index: 2;
+    left: 18px;
+}
+
+.banner .content .code {
+    background-color: #555;
+    padding: 7px 15px;
+    display: inline-block;
+    position: relative;
+    margin-left: 3px;
+    transform: skew(-40deg);
+    min-width: 100px;
+    z-index: 1;
+    margin-bottom: 2rem;
+}
+
+.banner .content .code h3 {
+    padding: 0;
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    transform: skew(40deg);
+    z-index: 1;
+}
+
+/* .banner h3 {
     font-size: 2.2rem;
     margin-bottom: 10px;
-}
+} */
 
 .banner p {
     font-size: 1.5rem;
-    line-height: 1.2;
+    line-height: 1.5;
 }
 
 .banner span {
@@ -1598,15 +1652,20 @@ input:checked+.switch-left+.switch-right::before {
     }
 
     .cookie-banner{
-        width: 80%;
+        width: 90%;
         padding: 7px;
     }
 
     .accept-btn,
     .reject-btn {
+        width: 8rem;
         padding: 4px 6px;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         margin: 4px;
+    }
+
+    .cookie-text{
+        font-size: 1.4rem;
     }
 }
 
