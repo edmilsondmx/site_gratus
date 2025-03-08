@@ -1594,27 +1594,27 @@ input:checked+.switch-left+.switch-right::before {
         padding: 1rem 0;
     }
 
-    .home .swiper-slide .slogan-box.benefits-container {
+    .home .swiper-slide .slogan-box .benefits-container {
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
         margin: 20px auto;
     }
 
-    .home .swiper-slide .slogan-box.benefit-item {
+    .home .swiper-slide .slogan-box .benefit-item {
         text-align: center;
         width: 30%;
         min-width: 180px;
         margin: 10px 0;
     }
 
-    .home .swiper-slide .slogan-box.benefit-item i {
+    .home .swiper-slide .slogan-box .benefit-item i {
         font-size: 20px;
         color: var(--main-color);
         margin-bottom: 10px;
     }
 
-    .home .swiper-slide .slogan-box.benefit-item p {
+    .home .swiper-slide .slogan-box .benefit-item p {
         font-size: 16px;
         color: var(--black);
     }
