@@ -241,8 +241,15 @@ section{
 }
 
 .swiper-slide .row .first {
-    height: 60vh !important;
     margin: 20px !important;
+}
+
+.swiper-slide .row .first img{
+    border-radius: 2rem;
+}
+
+.swiper-slide .row .slogan, .swiper-slide .row .benefits-container {
+    display: none;
 }
 
 .swiper-slide .row .content {
@@ -1306,7 +1313,7 @@ input:checked+.switch-left+.switch-right::before {
     align-items: center;
     gap: 15px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1;
+    z-index: 3;
 }
 
 .cookie-icon {
@@ -1554,7 +1561,7 @@ input:checked+.switch-left+.switch-right::before {
     .home .swiper-slide .row .content {
         padding: 0px;
         flex: 0;
-        text-align: start;
+        text-align: center;
     }
 
     .home .swiper-slide .row .content ul {
@@ -1562,6 +1569,54 @@ input:checked+.switch-left+.switch-right::before {
         padding-left: 0;
         padding: 0;
         line-height: 1;
+    }
+
+    .home .swiper-slide .slogan-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home .swiper-slide .slogan-box .first{
+        margin: 0!important;
+        margin-top: 2rem !important;
+    }
+
+    .home .swiper-slide .slogan-box .slogan {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem !important;
+    }
+
+    .home .swiper-slide .slogan-box .slogan p, .home .swiper-slide .slogan-box .slogan p span {
+        font-size: 2.5rem;
+        padding: 1rem 0;
+    }
+
+    .home .swiper-slide .slogan-box.benefits-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 20px auto;
+    }
+
+    .home .swiper-slide .slogan-box.benefit-item {
+        text-align: center;
+        width: 30%;
+        min-width: 180px;
+        margin: 10px 0;
+    }
+
+    .home .swiper-slide .slogan-box.benefit-item i {
+        font-size: 20px;
+        color: var(--main-color);
+        margin-bottom: 10px;
+    }
+
+    .home .swiper-slide .slogan-box.benefit-item p {
+        font-size: 16px;
+        color: var(--black);
     }
 
     .home .swiper-container{
