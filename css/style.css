@@ -33,7 +33,6 @@
     outline: none; border: none;
     box-sizing: border-box;
     text-decoration: none;
-    /* text-transform: capitalize; */
     transition: all .3s ease-out;
     scroll-behavior: smooth;
 }
@@ -187,8 +186,6 @@ section{
 
 .home{
     display: flex;
-    /* align-items: center; */
-    /* flex-wrap: wrap; */
     gap: 1.5rem;
     padding-top: 10rem;
     position: relative;
@@ -230,7 +227,6 @@ section{
 }
 
 .swiper-slide .row .image {
-    /* flex: 1 1 3rem; */
     z-index: 1;
     height: 80vh;
 }
@@ -280,9 +276,7 @@ section{
 
 .home .swiper-container {
     width: 100%;
-    /* padding-top: 5rem; */
     padding-bottom: 15rem;
-    /* z-index: 5; */
 }
 
 .home .swiper-slide {
@@ -445,7 +439,7 @@ section{
     padding-left: 20px;
     color: var(--light-color);
 }
-/* teste */
+
 .services .product-description .content .label {
     font-size: 2rem;
     background-color: #2096a8;
@@ -487,12 +481,6 @@ section{
     transform: skew(40deg);
     z-index: 1;
 }
-/* teste */
-
-/* .services .product-description h3 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-} */
 
 .services .product-description p {
     font-size: 1.7rem;
@@ -527,7 +515,6 @@ section{
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
-    /* background-color: hsla(188, 68%, 39%, 0.7); */
     z-index: 1000;
 }
 
@@ -589,11 +576,6 @@ section{
     z-index: 1;
 }
 
-/* .banner h3 {
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-} */
-
 .banner p {
     font-size: 1.5rem;
     line-height: 1.5;
@@ -617,38 +599,6 @@ section{
 .banner button:hover {
     background: rgba(139, 0, 0, 0.505);
 }
-
-/* .services .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(40rem, 1fr));
-    gap: 1.5rem;
-}
-
-.services .box-container .box{
-    text-align: center;
-    border: var(--border);
-    box-shadow: var(--box-shadow);
-    border-radius: .5rem;
-    padding: 4rem 2rem;
-}
-
-.services .box-container .box img{
-    height: 10rem;
-    border-radius: 10px;
-}
-
-.services .box-container .box h3{
-    font-size: 2.5rem;
-    color: var(--black);
-    padding-top: 1.5rem;
-}
-
-.services .box-container .box p{
-    color: var(--light-color);
-    font-size: 1.5rem;
-    padding: 1rem 0;
-    line-height: 1.8;
-} */
 
 .about {
     min-height: 100vh;
@@ -709,8 +659,6 @@ section{
 
 .about .row{
     display: flex;
-    /* align-items: center; */
-    /* flex-wrap: wrap; */
     gap: 1rem;
 }
 
@@ -727,7 +675,6 @@ section{
 }
 
 .about .row .content{
-    /* flex: 1 1 45rem ; */
     width: 100%;
 }
 
@@ -808,7 +755,6 @@ section{
 
 .rocker-small {
     font-size: 1.5rem;
-    /* Sizes the switch */
     margin: 1em;
 }
 
@@ -909,24 +855,6 @@ input:checked+.switch-left+.switch-right {
 input:checked+.switch-left+.switch-right::before {
     background-color: #ccc;
 }
-
-/* Keyboard Users */
-/* input:focus+.switch-left {
-    color: #333;
-} */
-
-/* input:checked:focus+.switch-left {
-    color: #fff;
-} */
-
-/* input:focus+.switch-left+.switch-right {
-    color: #fff;
-} */
-
-/* input:checked:focus+.switch-left+.switch-right {
-    color: #333;
-} */
-
 
 .products{
     min-height: 100vh;
@@ -1195,14 +1123,6 @@ input:checked+.switch-left+.switch-right::before {
     text-transform: uppercase;
 }
 
-/* .footer .box-container .box .info{
-    display: block;
-    font-size: 1.5rem;
-    padding: 1rem 0;
-    color: var(--light-color);
-    text-transform:none;
-} */
-
 .footer .box-container .box h3{
     font-size: 2.5rem;
     padding: 1rem 0;
@@ -1430,39 +1350,169 @@ input:checked+.switch-left+.switch-right::before {
     }
 }
 
-@media (max-width:768px){
-    #menu-btn{
-        display: initial;
+@media (max-width:768px) {
+    html {
+        font-size: 55%;
+        width: 100%;
     }
 
-    /* .header .navbar{
-        position: absolute;
-        top: 115%;
-        right: 2rem;
-        background: #fff;
-        box-shadow: var(--box-shadow);
-        border: var(--border);
-        border-radius: .5rem;
-        width: 30rem;
-        transform: scale(0);
-        transform-origin: top right;
-        opacity: 0;
+    .header {
+        padding: 2rem;
+        max-width: 100vw;
     }
 
-    .header .navbar a{
-        font-size: 2rem;
-        display: block;
-        padding: 1rem;
-        margin: 1rem;
-        border-radius: .5rem;
+    .header .logo_image {
+        width: 8rem;
     }
 
-    .header .navbar a:hover{
-        background: var(--bg);
-    } */
+    .header .logo_text a {
+        font-size: 3.5rem;
+    }
 
-    .home .content{
+    .header .logo_text span {
+        font-size: 1.8rem;
+    }
+
+    .header .active {
+        background-color: var(--bg);
+        width: 80%;
+        height: 70vh;
+    }
+
+    .header .active a {
+        font-size: 3.2rem;
+    }
+
+    .home {
+        padding-top: 15rem;
+    }
+
+    .home .swiper-slide .row {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
         text-align: center;
+    }
+
+    .home .swiper-slide .row .image {
+        flex: 1 1 4rem;
+        max-width: 100%;
+        max-height: 350px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .home .swiper-slide .row .image img {
+        width: 85%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .home .swiper-slide .row .content {
+        padding: 2rem;
+        flex: 0;
+        text-align: center;
+    }
+
+    .home .swiper-slide .slogan-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home .swiper-slide .slogan-box .slogan p,
+    .home .swiper-slide .slogan-box .slogan p span {
+        font-size: 3rem;
+        padding: 1rem 0;
+    }
+
+    .home .swiper-slide .slogan-box .benefits-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 30px auto;
+    }
+
+    .home .swiper-slide .slogan-box .benefit-item {
+        text-align: center;
+        width: 30%;
+        margin: 15px 0;
+        padding: 1.5rem;
+        border-top: 0.2rem solid rgba(0, 0, 0, .1);
+        border-left: 0.2rem solid rgba(0, 0, 0, .1);
+        border-bottom: 0.5rem solid rgba(0, 0, 0, .1);
+        border-right: 0.5rem solid rgba(0, 0, 0, .1);
+    }
+
+    .home .swiper-slide .slogan-box .benefit-item i {
+        font-size: 25px;
+        color: var(--main-color);
+        margin-bottom: 10px;
+    }
+
+    .home .swiper-slide .slogan-box .benefit-item p {
+        font-size: 16px;
+        color: var(--black);
+    }
+
+    .services {
+        max-width: 100%;
+        margin-top: 50px;
+    }
+
+    .services .box-container .box img {
+        max-height: 160px;
+    }
+
+    .services .product-description {
+        font-size: 2.1rem;
+        color: var(--black);
+        line-height: 1.9;
+    }
+
+    .products {
+        max-width: 100%;
+        margin-top: 50px;
+    }
+
+    .products .box-products {
+        margin: 1.5rem;
+    }
+
+    .about {
+        margin-top: 50px;
+    }
+
+    .about .row .content p {
+        font-size: 2.2rem;
+    }
+
+    .contact {
+        margin-top: 50px;
+    }
+
+    .footer .box-container {
+        gap: 1rem;
+    }
+
+    .footer .box-container .box .info {
+        gap: 1rem;
+    }
+
+    .cookie-banner {
+        width: 85%;
+        padding: 10px;
+    }
+
+    .accept-btn,
+    .reject-btn {
+        width: 10rem;
+        padding: 6px 8px;
+        font-size: 1.6rem;
+    }
+
+    .cookie-text {
+        font-size: 1.6rem;
     }
 }
 
@@ -1609,8 +1659,13 @@ input:checked+.switch-left+.switch-right::before {
 
     .home .swiper-slide .slogan-box .benefit-item {
         text-align: center;
-        width: 35%;
+        width: 40%;
         margin: 10px 0;
+        padding: 1rem;
+        border-top: 0.1rem solid rgba(0, 0, 0, .1);
+        border-left: 0.1rem solid rgba(0, 0, 0, .1);
+        border-bottom: 0.4rem solid rgba(0, 0, 0, .1);
+        border-right: 0.4rem solid rgba(0, 0, 0, .1);
     }
 
     .home .swiper-slide .slogan-box .benefit-item i {
@@ -1620,7 +1675,7 @@ input:checked+.switch-left+.switch-right::before {
     }
 
     .home .swiper-slide .slogan-box .benefit-item p {
-        font-size: 16px;
+        font-size: 14px;
         color: var(--black);
     }
 
@@ -1670,10 +1725,6 @@ input:checked+.switch-left+.switch-right::before {
         max-width: 100%;
         margin-top: 70px;
     }
-
-    /* .products .box-products::before, .products .box-products span{
-        display: none;
-    } */
 
     .products .box-products {
         margin: 1rem;
