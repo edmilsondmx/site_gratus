@@ -28,7 +28,7 @@ var swiper = new Swiper(".image-slider", {
     },
     loop: true,
     autoplay: {
-        delay: 5000,
+        delay: 500000,
         disableOnInteraction: false,
   },
 });
@@ -117,18 +117,38 @@ function startCarousel(carouselId) {
 startCarousel('carousel1'); // Carrossel 1 começa imediatamente
 setTimeout(() => startCarousel('carousel2'), 500); // Carrossel 2 começa após 500ms
 setTimeout(() => startCarousel('carousel3'), 1000); // Carrossel 3 começa após 1000ms
+setTimeout(() => startCarousel('carousel4'), 1500); // Carrossel 3 começa após 1000ms
+
+function toggleBanner(bannerId, show) {
+  const overlay = document.getElementById('overlay');
+  const banner = document.getElementById(bannerId);
+
+  if (show) {
+    overlay.style.display = 'block';
+    banner.style.display = 'block';
+  } else {
+    overlay.style.display = 'none';
+    banner.style.display = 'none';
+  }
+}
 
 document.getElementById('moreInfo').addEventListener('click', function () {
-  document.getElementById('overlay').style.display = 'block';
-  document.getElementById('banner').style.display = 'block';
+  toggleBanner('banner', true);
 });
 
 document.getElementById('fecharBtn').addEventListener('click', function () {
-  document.getElementById('overlay').style.display = 'none';
-  document.getElementById('banner').style.display = 'none';
+  toggleBanner('banner', false);
+});
+
+document.getElementById('moreInfo2').addEventListener('click', function () {
+  toggleBanner('banner2', true);
+});
+
+document.getElementById('fecharBtn2').addEventListener('click', function () {
+  toggleBanner('banner2', false);
 });
 
 document.getElementById('overlay').addEventListener('click', function() {
-  document.getElementById('overlay').style.display = 'none';
-  document.getElementById('banner').style.display = 'none';
+  toggleBanner('banner', false);
+  toggleBanner('banner2', false);
 });
