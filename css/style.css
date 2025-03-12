@@ -412,11 +412,20 @@ section{
     box-shadow: var(--box-shadow);
 }
 
+.services .product-section {
+    display: none;
+}
+
+.services .product-section.active {
+    display: block;
+}
+
 .services .product-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 80%;
+    margin: 2rem auto;
 }
 
 .services .carousel {
@@ -599,6 +608,35 @@ section{
 
 .banner button:hover {
     background: rgba(139, 0, 0, 0.505);
+}
+
+/* paginação */
+.services .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.services .pagination button {
+    padding: 7px 12px;
+    border: none;
+    background: var(--main-color);
+    color: var(--bg);
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+}
+
+.services .pagination button:disabled {
+    background: var(--light-color);
+    cursor: not-allowed;
+}
+
+.services .pagination span{
+    font-size: 1.2rem;
+    color: var(--black);
 }
 
 .about {
@@ -1704,6 +1742,10 @@ input:checked+.switch-left+.switch-right::before {
         max-height: 140px;
     }
 
+    .services .product-section{
+        margin-bottom: 2rem;
+    }
+
     .services .product-section .product-container .carousel{
         display: none;
     }
@@ -1713,6 +1755,11 @@ input:checked+.switch-left+.switch-right::before {
         color: var(--black);
         line-height: 1.8;
         padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+
+    .services .pagination {
+        margin-top: 3rem;
     }
 
     .services .product-container{
